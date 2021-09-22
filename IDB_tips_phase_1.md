@@ -41,4 +41,13 @@ If there are any errors or if there is something you want to add, create a pull 
 
 - Set up a card view of your GitLab issues for the phase.
     ![image](https://user-images.githubusercontent.com/8890739/134420492-354e10e5-448e-4726-81c0-d779677eba38.png)
-    - I would 
+    - I would create a milestone for each phase, and then create a seperate board for each phase. This is so you can see only the issues you need to implement for a given phase.
+    - Create labels like "To Do", "In Progress", and "QA", which indicate the status of each issue, and then create lists for those labels. You can drag and drop issues into these lists as they change status. This gives a clear view of what needs to be done, who's currently working on what, and what is already finished.
+- Do code reviews through merge requests
+    - When someone in your group wants to merge a feature branch into develop. Create a merge request and have another person take a look at the code for any obvious errors. A second set of eyes always helps.
+
+## Deployment
+- Learn which AWS services you will need, and what each of them does
+- Set up automatic deployment on AWS through GitLab pipelines
+    - AWS Amplify has useful GitLab integration with React apps
+- Have a separate development and production deployment
