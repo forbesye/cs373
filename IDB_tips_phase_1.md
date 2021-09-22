@@ -15,7 +15,7 @@ If there are any errors or if there is something you want to add, create a pull 
     - You will have to redo your entire front-end code base for phase 2 if you don't. A lot of groups when I took the class said they wished that they used React from the start.
     - You will get more time getting comfortable with React. React has a bit of a learning curve to it, so greater time exposed will definitely help.
     - You can set up automatic front-end deployment in GitLab in phase 1, which will make deploying much, much simpler.
-- Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
+- Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. TypeScript is just JavaScript, but with you guessed it: types! The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
 - Use a linter like [ESLint](https://eslint.org/) and a code formatter like [Prettier](https://prettier.io/). This is like mypy and black for Python respectively. ESLint catches errors and Prettier ensures consistent formatting, regardless of the conventions of each individual developer. I found the auto-indentation feature in Prettier to be very helpful with nested HTML tags that you will deal with.
 - Async/await/promises in JavaScript is a concept that you (most likely) haven't been exposed to in Java, Python, C, or C++. It's much more common in JavaScript. In phase 1, you'll use this when calling GitLab's API. Here's a video that I think does a great job at explaining it: https://www.youtube.com/watch?v=vn3tm0quoqE
 - If your group has little/no prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albeit at the cost of original design.
@@ -58,11 +58,15 @@ If there are any errors or if there is something you want to add, create a pull 
     ![image](https://user-images.githubusercontent.com/8890739/134426838-7bfdd431-89ca-4828-b21d-de336d91a4ef.png)
 
 ## Helpful Links
+- [Create React App - Getting Started](https://create-react-app.dev/docs/getting-started) - You'll need to use Create React App to bootstrap your React project. (Next.js is a great framework, but its complexity compared to CRA, as well as the fact that we want a SPA w/ client-side rendering necesitates the use of CRA).
+- [React Router](https://reactrouter.com/) - You'll need this to implement routing between pages in your React app.
+- [axios](https://axios-http.com/) - HTTP client that provides more configuration than JavaScript's `fetch` function. Will be particularly useful in phase 2 and 3.
 - [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information packed videos. Here are some good ones to watch:
     - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
     - [JavaScript Promise in 100 seconds](https://www.youtube.com/watch?v=RvYYCGs45L4)
     - [JavaScript Survival Guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
     - [Async/Await in JavaScript](https://www.youtube.com/watch?v=vn3tm0quoqE)
     - [React Hooks Explained](https://www.youtube.com/watch?v=TNhaISOUy6Q)
+    - [JavaScript under the hood](https://www.youtube.com/watch?v=FSs_JYwnAdI)
     - [Why to use TypeScript in React](https://www.youtube.com/watch?v=ydkQlJhodio)
     - [AWS Services Explained](https://www.youtube.com/watch?v=JIbIYCM48to)
