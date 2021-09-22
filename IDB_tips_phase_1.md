@@ -17,7 +17,8 @@ If there are any errors or if there is something you want to add, create a pull 
     - You can set up automatic front-end deployment in GitLab in phase 1, which will make deploying much, much simpler.
 - Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
 - Use a linter like [ESLint](https://eslint.org/) and a code formatter like [Prettier](https://prettier.io/). This is like mypy and black for Python respectively. ESLint catches errors and Prettier ensures consistent formatting, regardless of the conventions of each individual developer. I found the auto-indentation feature in Prettier to be very helpful with nested HTML tags that you will deal with.
-- If your group has little prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albiet at the cost of original design.
+- Async/await/promises in JavaScript is a concept that you (most likely) haven't been exposed to in Java, Python, C, or C++. It's much more common in JavaScript. In phase 1, you'll use this when calling GitLab's API. Here's a video that I think does a great job at explaining it: https://www.youtube.com/watch?v=vn3tm0quoqE
+- If your group has little prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albeit at the cost of original design.
 - Get familiar with the CSS [box model](https://www.w3schools.com/css/css_boxmodel.asp), [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), and [grid](https://css-tricks.com/snippets/css/complete-guide-grid/). These are important to get a grasp of.
 
 ## Project Management
@@ -55,3 +56,12 @@ If there are any errors or if there is something you want to add, create a pull 
     - If you're using AWS Amplify, it's very easy to set this up. Just connect your develop branch, and it will automatically deploy every time you update that branch!
     ![image](https://user-images.githubusercontent.com/8890739/134424881-d01525ca-12a1-4f9c-a5f7-5445efa1fcfd.png)
 
+## Helpful Links
+- [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information packed videos. Here are some good ones to watch:
+    - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+    - [JavaScript Promise in 100 seconds](https://www.youtube.com/watch?v=RvYYCGs45L4)
+    - [JavaScript Survival Guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
+    - [Async/Await in JavaScript](https://www.youtube.com/watch?v=vn3tm0quoqE)
+    - [React Hooks Explained](https://www.youtube.com/watch?v=TNhaISOUy6Q)
+    - [Why to use TypeScript in React](https://www.youtube.com/watch?v=ydkQlJhodio)
+    - [AWS Services Explained](https://www.youtube.com/watch?v=JIbIYCM48to)
