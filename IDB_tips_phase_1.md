@@ -66,7 +66,7 @@ If there are any errors or if there is something you want to add, create a pull 
     - If you're going to use TypeScript, make sure to run `npx create-react-app my-app --template typescript` instead!
 - [React Router](https://reactrouter.com/) - You'll need this to implement routing between pages in your React app.
 - [axios](https://axios-http.com/) - HTTP client that provides more configuration than JavaScript's `fetch` function. Will be particularly useful in phase 2 and 3.
-- [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information packed videos. Here are some good ones to watch:
+- [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information-packed videos. Here are some good ones to watch:
     - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
     - [JavaScript Promise in 100 seconds](https://www.youtube.com/watch?v=RvYYCGs45L4)
     - [JavaScript Survival Guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
