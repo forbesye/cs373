@@ -30,7 +30,7 @@ If there are any errors or if there is something you want to add, create a pull 
         - For each feature/issue you want to implement, you make a separate branch that branches off from develop.
         - E.g. I want to implement the about page, which is issue #12 on GitLab. I make a branch called “feature/12-about” based off the branch “develop”. You would then commit your changes to the feature branch, and when you’re done implementing the feature you make a merge request back to develop.
     - Having a develop branch
-        - This where all of the feature branch merges into. Consider this your beta code base where you can see if new things you implemented cause any issues.
+        - This where all of the feature branch merges into. Consider this your "beta" code base where you can see if new things you just implemented cause any issues when merged in.
     - Having a production (master) branch
         - When you're ready to deploy, you merge develop into master. All code that is on this branch should be considered ready to be used by the general public.
         - If you add automatic deployment (I will mention this below), your deployment process will be as simple as merging develop into production!
