@@ -1,0 +1,44 @@
+# IDB Tips Phase 1
+
+These are some tips for approaching and implementing phase 1 of the IDB project. Some of these are opinionated, and we will **not** take off points for not following these tips (unless they’re defined in the rubric). If you have prior experience with a different method or approach than what’s stated, and feel that it would be more effective, feel free to use that instead.
+
+If there are any errors or if there is something you want to add, create a pull request to this repo.
+
+## General
+- Start early! A lot of the work for this project is not conceptually hard, but it requires a solid amount of time to implement.
+- Google is your friend. I’m sure we’re all aware of this as CS majors, but this holds especially true for this course.
+- Look at other/past groups' repos. There is a lot of valuable information in how to approach certain problems.
+- Phase 2 is a *lot* of work, so setting up a good foundation in phase 1 will help you immensely going forward.
+
+## Front-end
+- We recommend using [React](https://reactjs.org/) in phase 1 for the following reasons:
+    - You will not have to redo your entire front-end code for phase 2 if you don't. A lot of groups when I took the class said they wished that they used React initially.
+    - You will get more time getting comfortable with React. React has a bit of a learning curve to it, so greater time exposed will definitely help.
+    - You can set up automatic front-end deployment in GitLab in phase 1, which will make deploying much, much simpler.
+- Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
+- Use a linter like [ESLint](https://eslint.org/) and a code formatter like [Prettier](https://prettier.io/). This is like mypy and black for Python respectively. ESLint catches errors and Prettier ensures consistent formatting, regardless of the conventions of each individual developer. I found the auto-indentation feature in Prettier to be very helpful with nested HTML tags that you will deal with.
+- If your group has little prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albiet at the cost of original design.
+- Get familiar with the CSS [box model](https://www.w3schools.com/css/css_boxmodel.asp), [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), and [grid](https://css-tricks.com/snippets/css/complete-guide-grid/). These are important to get a grasp of.
+
+## Project Management
+- Follow some form of Git flow. What you *absolutely don't* want to do is have everyone pushing to the same branch at the same time. Git flow typically entails:
+    
+    ![image](https://user-images.githubusercontent.com/8890739/134418139-624e8ae1-8534-4c28-bfc6-69ef9e373ccb.png)
+    
+    - Having feature branches
+        - For each feature/issue you want to implement, you make a separate branch that branches off from develop.
+        - E.g. I want to implement the about page, which is issue #12 on GitLab. I make a branch called “feature/12-about” based off the branch “develop”. You would then commit your changes to the feature branch, and when you’re done implementing the feature you make a merge request back to develop.
+    - Having a develop branch
+        - This where all of the feature branch merges into. Consider this your beta code base where you can see if new things you implemented cause any issues.
+    - Having a production (master) branch
+        - When you're ready to deploy, you merge develop into master. All code that is on this branch should be considered ready to be used by the general public.
+        - If you add automatic deployment (I will mention this below), your deployment process will be as simple as merging develop into production!
+- If you're going to use Git flow, I would also recommending setting your GitLab repo settings so that:
+    - No one is allowed to push to develop or master directly
+    - Developers are allowed to merge to develop
+    - No one is allowed to merge into master except for one trusted individual. The group must come to an agreement before this person merges to master.
+    ![image](https://user-images.githubusercontent.com/8890739/134420218-b0a8797c-5d30-4e90-9461-d0906f495f54.png)
+
+- Set up a card view of your GitLab issues for the phase.
+    ![image](https://user-images.githubusercontent.com/8890739/134420492-354e10e5-448e-4726-81c0-d779677eba38.png)
+    - I would 
