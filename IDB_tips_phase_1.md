@@ -19,7 +19,7 @@ If there are any errors or if there is something you want to add, create a pull 
 - Use a linter like [ESLint](https://eslint.org/) and a code formatter like [Prettier](https://prettier.io/). This is like mypy and black for Python respectively. ESLint catches errors and Prettier ensures consistent formatting, regardless of the conventions of each individual developer. I found the auto-indentation feature in Prettier to be very helpful with nested HTML tags that you will deal with.
 - Async/await/promises in JavaScript is a concept that you (most likely) haven't been exposed to in Java, Python, C, or C++. It's much more common in JavaScript. In phase 1, you'll use this when calling GitLab's API. Here's a video that I think does a great job at explaining it: https://www.youtube.com/watch?v=vn3tm0quoqE
 - If your group has little/no prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albeit at the cost of original design.
-- Get familiar with the CSS [box model](https://www.w3schools.com/css/css_boxmodel.asp), [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), and [grid](https://css-tricks.com/snippets/css/complete-guide-grid/). These are important to get a grasp of.
+- Get familiar with the CSS [box model](https://www.w3schools.com/css/css_boxmodel.asp), [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), and [grid](https://css-tricks.com/snippets/css/complete-guide-grid/).
 
 ## Project Management
 - Follow some form of [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). What you *absolutely don't* want to do is have everyone pushing to the same branch at the same time. Git flow typically entails:
@@ -49,7 +49,11 @@ If there are any errors or if there is something you want to add, create a pull 
     ![image](https://user-images.githubusercontent.com/8890739/134427225-d3117223-3cef-4376-b5c4-affda6c7a0e5.png)
 
 ## Deployment
-- Learn which AWS services you will need, and what each of them does
+- Learn which AWS services you will need, and what each of them does. The ones I recommmend first looking at are:
+    - Amplify for front-end deployment
+    - Certificate manager for TLS/SSL certificate (in order to get `https`)
+    - EC2 for back-end deployment (phase 2)
+    - RDS for database hosting (phase 2)
 - Set up automatic deployment on AWS through GitLab pipelines
     - AWS Amplify has useful GitLab integration with React apps
 - Have a separate development and production deployment
