@@ -63,6 +63,7 @@ If there are any errors or if there is something you want to add, create a pull 
 
 ## Helpful Links
 - [Create React App - Getting Started](https://create-react-app.dev/docs/getting-started) - You'll need to use Create React App to bootstrap your React project. (Next.js is a great framework, but its complexity compared to CRA, as well as the fact that we want a SPA w/ client-side rendering necesitates the use of CRA).
+    - If you're going to use TypeScript, make sure to run `npx create-react-app my-app --template typescript` instead!
 - [React Router](https://reactrouter.com/) - You'll need this to implement routing between pages in your React app.
 - [axios](https://axios-http.com/) - HTTP client that provides more configuration than JavaScript's `fetch` function. Will be particularly useful in phase 2 and 3.
 - [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information packed videos. Here are some good ones to watch:
