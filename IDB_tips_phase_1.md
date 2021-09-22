@@ -18,11 +18,11 @@ If there are any errors or if there is something you want to add, create a pull 
 - Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
 - Use a linter like [ESLint](https://eslint.org/) and a code formatter like [Prettier](https://prettier.io/). This is like mypy and black for Python respectively. ESLint catches errors and Prettier ensures consistent formatting, regardless of the conventions of each individual developer. I found the auto-indentation feature in Prettier to be very helpful with nested HTML tags that you will deal with.
 - Async/await/promises in JavaScript is a concept that you (most likely) haven't been exposed to in Java, Python, C, or C++. It's much more common in JavaScript. In phase 1, you'll use this when calling GitLab's API. Here's a video that I think does a great job at explaining it: https://www.youtube.com/watch?v=vn3tm0quoqE
-- If your group has little prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albeit at the cost of original design.
+- If your group has little/no prior CSS experience, a framework like [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://next.material-ui.com/), or [Ant Design](https://ant.design/) provides a lot of built in utility and will make putting together your website a lot quicker, albeit at the cost of original design.
 - Get familiar with the CSS [box model](https://www.w3schools.com/css/css_boxmodel.asp), [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), and [grid](https://css-tricks.com/snippets/css/complete-guide-grid/). These are important to get a grasp of.
 
 ## Project Management
-- Follow some form of Git flow. What you *absolutely don't* want to do is have everyone pushing to the same branch at the same time. Git flow typically entails:
+- Follow some form of [Git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow). What you *absolutely don't* want to do is have everyone pushing to the same branch at the same time. Git flow typically entails:
     
     ![image](https://user-images.githubusercontent.com/8890739/134418139-624e8ae1-8534-4c28-bfc6-69ef9e373ccb.png)
     
@@ -54,7 +54,7 @@ If there are any errors or if there is something you want to add, create a pull 
 - Have a separate development and production deployment
     - We require there to be no changes to production for 7 days after submission to allow for grading. Having two seperate deployments (e.g. website.com and dev.website.com) allows you to keep developing while we grade your project.
     - If you're using AWS Amplify, it's very easy to set this up. Just connect your develop branch, and it will automatically deploy every time you update that branch!
-    ![image](https://user-images.githubusercontent.com/8890739/134424881-d01525ca-12a1-4f9c-a5f7-5445efa1fcfd.png)
+    ![image](https://user-images.githubusercontent.com/8890739/134426838-7bfdd431-89ca-4828-b21d-de336d91a4ef.png)
 
 ## Helpful Links
 - [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information packed videos. Here are some good ones to watch:
