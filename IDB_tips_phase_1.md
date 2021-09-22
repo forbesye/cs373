@@ -50,10 +50,10 @@ If there are any errors or if there is something you want to add, create a pull 
 
 ## Deployment
 - Learn which AWS services you will need, and what each of them does. The ones I recommmend first looking at are:
-    - Amplify for front-end deployment
-    - Certificate manager for TLS/SSL certificate (in order to get `https`)
-    - EC2 for back-end deployment (phase 2)
-    - RDS for database hosting (phase 2)
+    - [Amplify](https://aws.amazon.com/amplify/) for front-end deployment
+    - [Certificate Manager](https://aws.amazon.com/certificate-manager/) for TLS/SSL certificate (in order to get `https`)
+    - [EC2](https://aws.amazon.com/ec2/) for back-end deployment (phase 2)
+    - [RDS](https://aws.amazon.com/rds/) for database hosting (phase 2)
 - Set up automatic deployment on AWS through GitLab pipelines
     - AWS Amplify has useful GitLab integration with React apps
 - Have a separate development and production deployment
