@@ -12,7 +12,7 @@ If there are any errors or if there is something you want to add, create a pull 
 
 ## Front-end
 - We recommend using [React](https://reactjs.org/) in phase 1 for the following reasons:
-    - You will not have to redo your entire front-end code for phase 2 if you don't. A lot of groups when I took the class said they wished that they used React initially.
+    - You will have to redo your entire front-end code base for phase 2 if you don't. A lot of groups when I took the class said they wished that they used React from the start.
     - You will get more time getting comfortable with React. React has a bit of a learning curve to it, so greater time exposed will definitely help.
     - You can set up automatic front-end deployment in GitLab in phase 1, which will make deploying much, much simpler.
 - Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
@@ -51,3 +51,7 @@ If there are any errors or if there is something you want to add, create a pull 
 - Set up automatic deployment on AWS through GitLab pipelines
     - AWS Amplify has useful GitLab integration with React apps
 - Have a separate development and production deployment
+    - We require there to be no changes to production for 7 days after submission to allow for grading. Having two seperate deployments (e.g. website.com and dev.website.com) allows you to keep developing while we grade your project.
+    - If you're using AWS Amplify, it's very easy to set this up. Just connect your develop branch, and it will automatically deploy every time you update that branch!
+    ![image](https://user-images.githubusercontent.com/8890739/134424881-d01525ca-12a1-4f9c-a5f7-5445efa1fcfd.png)
+
