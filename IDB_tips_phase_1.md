@@ -11,7 +11,7 @@ If there are any errors or if there is something you want to add, create a pull 
 - Phase 2 is a *lot* of work, so setting up a good foundation in phase 1 will help you immensely going forward.
 
 ## Front-end
-- We recommend using [React](https://reactjs.org/) in phase 1 for the following reasons:
+- I recommend using [React](https://reactjs.org/) in phase 1 for the following reasons:
     - You will have to redo your entire front-end code base for phase 2 if you don't. A lot of groups when I took the class said they wished that they used React from the start.
     - You will get more time getting comfortable with React. React has a bit of a learning curve to it, so greater time exposed will definitely help.
     - You can set up automatic front-end deployment in GitLab in phase 1, which will make deploying much, much simpler.
