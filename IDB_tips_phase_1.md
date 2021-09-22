@@ -1,6 +1,6 @@
 # IDB Tips Phase 1
 
-These are some tips for approaching and implementing phase 1 of the IDB project. Some of these are opinionated, and we will **not** take off points for not following these tips (unless they’re defined in the rubric). If you have prior experience with a different method or approach than what’s stated, and feel that it would be more effective, feel free to use that instead.
+These are some tips for approaching and implementing phase 1 of the IDB project. Some of these are opinionated, and we will <ins>**not**</ins> take off points for not following these tips (unless they’re defined in the rubric). If you have prior experience with a different method or approach than what’s stated, and feel that it would be more effective, feel free to use that instead.
 
 If there are any errors or if there is something you want to add, create a pull request to this repo.
 
