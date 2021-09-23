@@ -1,5 +1,11 @@
 # Intro to HTML, CSS, JavaScript, and React
 
+<ins>Contents</ins>
+- [HTML](#html)
+- [CSS](#css)
+- [JavaScript](#javascript)
+- [React](#react)
+
 ## HTML
 HTML is the markup language that is the building block of the web. It defines the content and structure of web pages. An HTML document is comprised of **tags** that are nested in a tree-like structure. For example, the following HTML:
 ```html
@@ -195,3 +201,11 @@ Since I have this `getCat()` function binded to the button, I end up changing `s
 https://user-images.githubusercontent.com/8890739/134554752-5ea4b7cc-5854-4078-b8a3-4ab14e3df089.mov
 
 ## React
+
+Manually linking the HTML and JavaScript is relatively straightforward as we have seen, but it can quickly get much more complex as the scope of a project increases. This is where React comes in. Under the hood, React updates the HTML and CSS on our page (the [DOM](https://en.wikipedia.org/wiki/Document_Object_Model)) in a performant manner as data and user input comes in. Furthermore, React has a massive amount of external packages/modules that we can use, reducing the amount of time that we need to spend creating things from scratch. Some of these are:
+
+- [React Router](https://reactrouter.com/) - For routing between pages in a single-page application
+- [React Bootstrap](https://react-bootstrap.github.io/) - The Bootstrap library that we saw earlier, but in declarative React components
+- [Axios](https://axios-http.com/docs/intro) - An HTTP client with more configuation options than the native fetch API that we used earlier
+- [left-pad](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) - For exposing the weakness of all these package dependencies
+
