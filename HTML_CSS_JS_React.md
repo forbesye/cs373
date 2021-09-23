@@ -5,6 +5,7 @@
 - [CSS](#css)
 - [JavaScript](#javascript)
 - [React](#react)
+- [Useful Links](#usefullinks)
 
 ## HTML
 HTML is the markup language that is the building block of the web. It defines the content and structure of web pages. An HTML document is comprised of **tags** that are nested in a tree-like structure. For example, the following HTML:
@@ -231,4 +232,25 @@ The curly braces for `{count}` and `{() => setCount(count + 1)}` allows you to "
 
 I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) with this component, so you can see it work and mess around with the code.
 
-I'll show how to create a React app in an upcoming guide, and how to deploy it to AWS.
+I'll show how to create a basic React app in an upcoming guide, and how to deploy it to AWS.
+
+## Useful Links
+- HTML
+  - [Mozilla HTML Docs](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics)
+- CSS
+  - [Mozilla CSS Docs](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  - [Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
+  - [Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated)
+  - [Box model](https://www.w3schools.com/css/css_boxmodel.asp)
+  - [Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+    - [Flexbox in 100 seconds](https://www.youtube.com/watch?v=K74l26pE4YA)
+    - [Flexbox Froggy](https://flexboxfroggy.com/)
+  - [Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
+    - [Grid in 100 seconds](https://www.youtube.com/watch?v=uuOXPWCh-6o)
+    - [Grid Garden](https://codepip.com/games/grid-garden/)
+- JavaScript
+  - [Mozilla JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - [JavaScript tutorial](https://javascript.info/)
+- React
+  - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+  - [React tutorial](https://reactjs.org/tutorial/tutorial.html)
