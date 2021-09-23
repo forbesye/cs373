@@ -234,9 +234,31 @@ The curly braces for `{count}` and `{() => setCount(oldCount => oldCount + 1)}` 
 
 The `useState` function returns `count` and `setCount`, a variable and a function respectively. The `count` has an initial value of 0, as it was the argument that was passed into `useState`. To update count, you need to call the function `setCount` and pass in the new value as an argument. You need to call `setCount` instead of simply doing `count++` or `count = count + 1`, as invoking `setCount` lets React know to update all places where `count` is referenced in the DOM.
 
-I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) with this component, so you can see it work and mess around with the code.
+Here's a React component version of the cat pics page from earlier:
+```jsx
+const Cats = () => {
+  const [catUrl, setCatUrl] = useState(
+    "https://cataas.com/cat/5f39a7075bc3fa00104444c3"
+  );
 
-Here's a version of the [Cat Pics](https://codesandbox.io/s/react-playground-forked-28j53?file=/index.js) implemented in React!
+  const getCat = async () => {
+    const response = await fetch("https://cataas.com/cat?json=true");
+    const cat = await response.json();
+    setCatUrl("https://cataas.com" + cat.url);
+  };
+
+  return (
+    <form>
+      <img src={catUrl} alt="cute cat" style={{ width: 400, height: 300 }} />
+      <button type="button" onClick={getCat}>
+        Increment Value
+      </button>
+    </form>
+  );
+};
+```
+
+I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) for the Counter and [Cat Pics](https://codesandbox.io/s/react-playground-forked-28j53?file=/index.js), so you can see it work and mess around with the code.
 
 I'll show how to create a basic React app in an upcoming guide, and how to deploy it to AWS.
 
