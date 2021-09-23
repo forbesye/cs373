@@ -72,6 +72,7 @@ If there are any errors or if there is something you want to add, create a pull 
 - [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information-packed videos. Here are some good ones to watch:
     - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
     - [TypeScript in 100 seconds](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)
+    - [RESTful APIs in 100 seconds](https://www.youtube.com/watch?v=-MTSQjw5DrM)
     - [JavaScript Promise in 100 seconds](https://www.youtube.com/watch?v=RvYYCGs45L4)
     - [Async/Await in JavaScript](https://www.youtube.com/watch?v=vn3tm0quoqE)
     - [React Hooks Explained](https://www.youtube.com/watch?v=TNhaISOUy6Q)
