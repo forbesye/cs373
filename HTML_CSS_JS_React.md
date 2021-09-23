@@ -155,6 +155,8 @@ const getCat = async () => {
 
 In the first line, I use the native [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/fetch) in JavaScript to make a `GET` request to CaaS, asking for a JSON file. Since it will take time for my request to go through, and for the API to respond back, I need to put the `await` keyword in front. Also note that I need to specify that this function is `async` when I declare it. This allows us to write code that runs asynchronously in a declarative synchronous manner.
 
+Here's a video that I think does a good job explaining it: https://www.youtube.com/watch?v=vn3tm0quoqE
+
 The response returned by the API is in a [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) format, and features a random cat every time you call it. Here's an example of the JSON in one call from the CaaS API:
 
 ```json
