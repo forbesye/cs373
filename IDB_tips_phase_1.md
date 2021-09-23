@@ -9,7 +9,7 @@ If there are any errors or if there is something you want to add, create a pull 
 - Google is your friend. I’m sure we’re all aware of this as CS majors, but this holds especially true for this course.
 - Look at other/past groups' repos. There is a lot of valuable information in how to approach certain problems.
 - Phase 2 is a *lot* of work, so setting up a good foundation in phase 1 will help you immensely going forward.
-- When choosing models and APIs, highly consider how you're going to programatically establish relationships between the models. Phase 2 will have you put these models in a relational database, which of course, you're going to have to map relationships between them in meaningful ways.
+- When choosing models and APIs, highly consider how you're going to programatically establish relationships between the models. Phase 2 will have you put these models in a relational database, which of course, means you're going to have to map relationships between them in meaningful ways.
     - e.g. Say you scrape a list of actors from API 1 and a list of movies from API 2, how can you determine which actors are in which movies? Does API 2 tell you that or vice versa?
 
 ## Front-end
