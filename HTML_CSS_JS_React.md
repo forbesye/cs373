@@ -5,7 +5,7 @@
 - [CSS](#css)
 - [JavaScript](#javascript)
 - [React](#react)
-- [Useful Links](#usefullinks)
+- [Useful Links](#useful-links)
 
 ## HTML
 HTML is the markup language that is the building block of the web. It defines the content and structure of web pages. An HTML document is comprised of **tags** that are nested in a tree-like structure. For example, the following HTML:
