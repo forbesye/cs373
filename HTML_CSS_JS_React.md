@@ -1,4 +1,4 @@
-# Intro to HTML, CSS, JavaScript/TypeScript, and React
+# Intro to HTML, CSS, JavaScript, and React
 
 ## HTML
 HTML is the markup language that is the building block of the web. It defines the content and structure of web pages. An HTML document is comprised of **tags** that are nested in a tree-like structure. For example, the following HTML:
@@ -91,7 +91,7 @@ I added a button and alert element as examples of what Bootstrap provides, but y
 
 There's a whole lot more to CSS that I think is important like [cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade), [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#how_is_specificity_calculated), [the box model](https://www.w3schools.com/css/css_boxmodel.asp), [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), and [grid](https://css-tricks.com/snippets/css/complete-guide-grid/). My goal here was to give you a brief introduction about the role of CSS and its relationship to HTML.
 
-## JavaScript/TypeScript
+## JavaScript
 
 While HTML and CSS define the layout, content, and style of the web page, we often still need logic. This is where JavaScript comes in.
 
