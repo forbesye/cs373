@@ -228,7 +228,7 @@ const Counter = () => {
 
 ```
 
-I can then create an instance of this Counter component by writing `<Counter />` anywhere I would put HTML. You can end up having React components within React components, which is a powerful tool. As well, each instance of Counter has its own variable `count`, so we don't have to mess with different `id`s and bindings to said `id`s like we would in React.
+I can then create an instance of this Counter component by writing `<Counter />` anywhere I would put HTML. You can end up having React components within React components, which is a powerful tool. As well, each instance of Counter has its own variable `count`, so we don't have to mess with different `id`s and bindings to said `id`s like we would with vanilla JavaScript.
 
 The curly braces for `{count}` and `{() => setCount(oldCount => oldCount + 1)}` allows you to "jump" between HTML and JavaScript. Being able to place these dynamic variables that auto-update the DOM when its values are modified is a key feature of React.
 
