@@ -228,7 +228,9 @@ const Counter = () => {
 
 ```
 
-The curly braces for `{count}` and `{() => setCount(count + 1)}` allows you to "jump" between HTML and JavaScript. Being able to place these dynamic variables that auto-update the DOM when its values are modified is a key feature of React.
+The curly braces for `{count}` and `{() => setCount(oldCount => oldCount + 1)}` allows you to "jump" between HTML and JavaScript. Being able to place these dynamic variables that auto-update the DOM when its values are modified is a key feature of React.
+
+The `useState` function returns `count` and `setCount`, a variable and a function respectively. The `count` has an initial value of 0, as it was the argument that was passed into `useState`. To update count, you need to call the function `setCount` and pass in the new value as an argument. You need to call `setCount` instead of simply doing `count++` or `count = count + 1`, as invoking `setCount` lets React know to update all places where `count` is referenced in the DOM.
 
 I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) with this component, so you can see it work and mess around with the code.
 
