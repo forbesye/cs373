@@ -209,3 +209,24 @@ Manually linking the HTML and JavaScript is relatively straightforward as we hav
 - [Axios](https://axios-http.com/docs/intro) - An HTTP client with more configuation options than the native fetch API that we used earlier
 - [left-pad](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/) - For exposing the weakness of all these package dependencies
 
+React is made of components, which are similar to HTML tags. It is also written in an extended version of JavaScript called JSX. It's sort of a combination of HTML and JavaScript. For example, let's remake the increment example from earlier as a single React component:
+
+```jsx
+const Counter = () => {
+  const [count, setCount] = useState(0);
+
+  return (
+    <form>
+      <input type="text" value={count} readOnly />
+      <button type="button" onClick={() => setCount(count + 1)}>
+        Increment Value
+      </button>
+    </form>
+  );
+};
+
+```
+
+The curly braces for `{count}` and `{() => setCount(count + 1)}` allows you to "jump" between HTML and JavaScript. Being able to place these dynamic variables that auto-update the DOM when its values are modified is a key feature of React.
+
+I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) with this component, so you can see it work and mess around with the code.
