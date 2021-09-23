@@ -65,11 +65,11 @@ As you can see, it has the attributes of making something blue, and having the f
   </body>
 </html>
 ```
-Here you can see that the `link` tag imports the CSS file and I applied the class `blueText` to the Hello world! paragraph. So it ends up looking like this:
+Here you can see that the `link` tag imports the CSS file and I applied the class `blueText` to the "Hello world!" paragraph. So it ends up looking like this:
 
 <img width="562" alt="image" src="https://user-images.githubusercontent.com/8890739/134543207-1c35ad2e-c4a8-4c9f-9b5d-8914e24b7737.png">
 
-There is a whole lot of possibilities with CSS, but it probably seems pretty daunting to actually end up with something that looks decent. That's where we can use libraries like [Bootstrap](https://getbootstrap.com/) to provide us with premade CSS classes. Bootstrap is essentially just a [big CSS file](https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css) (and JavaScript file, but don't worry about that for now). So we can import it the exact same way we imported our small `styles.css` file, except this time `href` is a link to the CSS file on the internet:
+There are a whole lot of possibilities with CSS, but it probably seems pretty daunting to actually end up with something that looks decent. That's where we can use libraries like [Bootstrap](https://getbootstrap.com/) to provide us with premade CSS classes. Bootstrap is essentially just a [big CSS file](https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css) (and JavaScript file, but don't worry about that for now). So we can import it the exact same way we imported our small `styles.css` file, except this time `href` is a link to the CSS file on the internet:
 
 ```html
 <html>
