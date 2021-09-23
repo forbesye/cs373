@@ -230,3 +230,5 @@ const Counter = () => {
 The curly braces for `{count}` and `{() => setCount(count + 1)}` allows you to "jump" between HTML and JavaScript. Being able to place these dynamic variables that auto-update the DOM when its values are modified is a key feature of React.
 
 I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) with this component, so you can see it work and mess around with the code.
+
+I'll show how to create a React app in an upcoming guide, and how to deploy it to AWS.
