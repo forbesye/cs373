@@ -252,6 +252,13 @@ I'll show how to create a basic React app in an upcoming guide, and how to deplo
     - [Grid Garden](https://codepip.com/games/grid-garden/)
 - JavaScript
   - [Mozilla JavaScript Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+  - [Array Map in 100 seconds](https://www.youtube.com/watch?v=DC471a9qrU4)
+  - [Array Reduce in 100 seconds](https://www.youtube.com/watch?v=tVCYa_bnITg)
+  - [? in NaN seconds](https://www.youtube.com/watch?v=O0gmXbN7lVE)
+  - [Destructuring in 100 seconds](https://www.youtube.com/watch?v=UgEaJBz3bjY)
+  - [JavaScript Modules in 100 seconds](https://www.youtube.com/watch?v=qgRUr-YUk1Q)
+  - [JavaScript under the hood](https://www.youtube.com/watch?v=FSs_JYwnAdI)
+  - [JavaScript functions explained](https://www.youtube.com/watch?v=gigtS_5KOqo)
   - [JavaScript tutorial](https://javascript.info/)
 - React
   - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
