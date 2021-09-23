@@ -139,5 +139,57 @@ Observe at how `id`, `value`, and `onclick` are connected in the HTML and JavaSc
 
 https://user-images.githubusercontent.com/8890739/134548544-29895615-0111-47fe-9866-5155fbddcce5.mov
 
+### Async/Await to call APIs
+
+Now I want to use this knowledge so far to use the internet for what it's meant for: looking at cats. But in order to get these pictures of cats, I'm going to call a RESTful API. In this case it's https://cataas.com/ (Cats as a Service).
+
+In my `logic.js` file, I add this one function:
+
+```js
+const getCat = async () => {
+  const response = await fetch("https://cataas.com/cat?json=true");
+  const cat = await response.json()
+  document.getElementById('catImg').src = "https://cataas.com" + cat.url;
+}
+```
+
+In the first line, I use the native [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/fetch) in JavaScript to make a `GET` request to CaaS, asking for a JSON file. Since it will take time for my request to go through, and for the API to respond back, I need to put the `await` keyword in front. Also note that I need to specify that this function is `async` when I declare it. This allows us to write code that runs asynchronously in a declarative synchronous manner.
+
+The response returned by the API is in a [JSON](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) format, and features a random cat every time you call it. Here's an example of the JSON in one call from the CaaS API:
+
+```json
+{
+  "id":"595f280c557291a9750ebf81",
+  "created_at":"2016-04-13T14:21:31.699Z",
+  "tags":["down"],
+  "url":"/cat/595f280c557291a9750ebf81"
+}
+```
+
+I then call the `json()` method on the response, which converts the response (which has a lot of other info that we don't need), into an object I can interface with in JavaScript. In this object, I only care about the `url` field. So I can reference it by calling `cat.url`. In the last line, I'll change the `src` attribute in the `img` tag to be that of the cat image. 
+
+The HTML for this page looks like this:
+
+```html
+<html>
+  <head>
+    <title>All Cats are Cute</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script type="text/javascript" src="./logic.js"></script>
+  </head>
+  <body>
+    <div>
+        <img src="" id="catImg" alt="cute cat" width="400px" height="200px" />
+        <form>
+          <button type="button" class="btn btn-primary" onclick="getCat()">Get Random Cat</button>
+        </form>
+    </div>
+  </body>
+</html>
+```
+
+Since I have this `getCat()` function binded to the button, I end up changing `src` in the `img` tag with each click with a new cat pic. This is the final product:
+
+https://user-images.githubusercontent.com/8890739/134554752-5ea4b7cc-5854-4078-b8a3-4ab14e3df089.mov
 
 ## React
