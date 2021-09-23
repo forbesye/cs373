@@ -71,10 +71,11 @@ If there are any errors or if there is something you want to add, create a pull 
 - [axios](https://axios-http.com/) - HTTP client that provides more configuration than JavaScript's `fetch` function. Will be particularly useful in phase 2 and 3.
 - [Fireship](https://www.youtube.com/c/Fireship/videos) is a great YouTube channel that has a lot of concise, information-packed videos. Here are some good ones to watch:
     - [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+    - [TypeScript in 100 seconds](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)
     - [JavaScript Promise in 100 seconds](https://www.youtube.com/watch?v=RvYYCGs45L4)
-    - [JavaScript Survival Guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
     - [Async/Await in JavaScript](https://www.youtube.com/watch?v=vn3tm0quoqE)
     - [React Hooks Explained](https://www.youtube.com/watch?v=TNhaISOUy6Q)
     - [JavaScript under the hood](https://www.youtube.com/watch?v=FSs_JYwnAdI)
+    - [JavaScript Survival Guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
     - [Why to use TypeScript in React](https://www.youtube.com/watch?v=ydkQlJhodio)
     - [AWS Services Explained](https://www.youtube.com/watch?v=JIbIYCM48to)
