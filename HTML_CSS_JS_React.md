@@ -236,6 +236,8 @@ The `useState` function returns `count` and `setCount`, a variable and a functio
 
 I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) with this component, so you can see it work and mess around with the code.
 
+Here's a version of the [Cat Pics](https://codesandbox.io/s/react-playground-forked-28j53?file=/index.js) implemented in React!
+
 I'll show how to create a basic React app in an upcoming guide, and how to deploy it to AWS.
 
 ## Useful Links
