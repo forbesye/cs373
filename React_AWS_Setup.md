@@ -39,7 +39,7 @@ That should be good enough to deploy now, let's do that!
    
 ## Deploying on AWS Amplify
 
-Make an AWS account if you haven't and go to [AWS Amplify](https://aws.amazon.com/amplify/). 
+Make an AWS account if you haven't yet and go to [AWS Amplify](https://aws.amazon.com/amplify/). 
 
 Then click on "New app" > "Host web app", choose GitLab as your Git host, and then continue.
 
