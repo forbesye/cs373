@@ -74,6 +74,7 @@ If there are any errors or if there is something you want to add, create a pull 
     - [RESTful APIs in 100 seconds](https://www.youtube.com/watch?v=-MTSQjw5DrM)
     - [JavaScript Promise in 100 seconds](https://www.youtube.com/watch?v=RvYYCGs45L4)
     - [Async/Await in JavaScript](https://www.youtube.com/watch?v=vn3tm0quoqE)
+    - [What is a tech stack?](https://www.youtube.com/watch?v=Sxxw3qtb3_g)
     - [React Hooks Explained](https://www.youtube.com/watch?v=TNhaISOUy6Q)
     - [JavaScript under the hood](https://www.youtube.com/watch?v=FSs_JYwnAdI)
     - [JavaScript Survival Guide](https://www.youtube.com/watch?v=9emXNzqCKyg)
