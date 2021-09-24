@@ -61,3 +61,20 @@ This is what you should see when you're done:
 
 ## Connecting domain name and enabling TLS/SSL
 
+Now we want to set up your domain name so that when you type it in your browser, you actually go to the site that you just deployed. AWS Amplify makes this process easier.
+
+Go to the "Domain Management" tab in the App settings, and then click on "Add domain". Type the your domain name, then click "Configure domain". Leave everything as is, then hit save.
+
+![image](https://user-images.githubusercontent.com/8890739/134710500-4ca4ea97-0547-4e0d-95bb-21f9eae7f904.png)
+
+Now AWS needs to confirm that you own your domain, so they can issue you a TLS/SSL certificate to enable https. This should pop up in your Domain Management tab:
+
+![Screen Shot 2021-09-23 at 5 28 10 AM](https://user-images.githubusercontent.com/8890739/134710743-c63fffd3-a074-4c39-8767-5a9344b5c85d.png)
+
+Go to your domain name registrar, and add the CNAME record that AWS asks you to:
+
+![Screen Shot 2021-09-24 at 11 43 18 AM](https://user-images.githubusercontent.com/8890739/134711384-0bc3e054-0e70-4e23-9a8b-9ddd5054b57f.png)
+
+**NOTE**: Some domain name registrars automically include your domain name at the end of the CNAME record. For example, on Google domains, if you copy and paste `abc123.website.com` as the host name, Google will automatically add `website.com` to the end, making it `abc123.website.com.website.com`, which is obviously not what you want.
+
+After a couple of minutes to upwards of an hour, depending on your domain registar and DNS propagation, AWS will verify your domain name ownership and grant you a TLS/SSL certificate.
