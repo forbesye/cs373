@@ -78,3 +78,11 @@ Go to your domain name registrar, and add the CNAME record that AWS asks you to:
 **NOTE**: Some domain name registrars automically include your domain name at the end of the CNAME record. For example, on Google domains, if you copy and paste `abc123.website.com` as the host name, Google will automatically add `website.com` to the end, making it `abc123.website.com.website.com`, which is obviously not what you want.
 
 After a couple of minutes to upwards of an hour, depending on your domain registar and DNS propagation, AWS will verify your domain name ownership and grant you a TLS/SSL certificate.
+
+Right after, AWS will provide another CNAME and alias record to add. The destination of these DNS records should be a `cloudfront.net` domain. Add those, wait a bit for the new records to propogate, and you should now be able to visit your website at its domain.
+
+This is what my DNS records looked like when I was done with everything. Google domains doesn't support alias records, so I had to set up a domain forward so when anyone goes to `texasvotes.me`, it redirects to `www.texasvotes.me`.
+
+<img width="677" alt="Screen Shot 2021-09-24 at 12 57 24 PM" src="https://user-images.githubusercontent.com/8890739/134720227-b1fce32d-21dd-4664-87c2-9a4978fb26fb.png">
+
+The site at cat-pictures-react.texasvotes.me is now available to the entire world!
