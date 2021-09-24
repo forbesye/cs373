@@ -16,7 +16,6 @@ If there are any errors or if there is something you want to add, create a pull 
 - I recommend using [React](https://reactjs.org/) in phase 1 for the following reasons:
     - You will have to redo your entire front-end code base for phase 2 if you don't. A lot of groups when I took the class said they wished that they used React from the start.
     - You will get more time getting comfortable with React. React has a bit of a learning curve to it, so greater time exposed will definitely help.
-    - You can set up automatic front-end deployment in GitLab in phase 1, which will make deploying much, much simpler.
 - Utilize [TypeScript](https://www.typescriptlang.org/) when making your React app. TypeScript is just JavaScript, but with you guessed it: types! The static typing and intellisense that TypeScript provides is well worth the additional learning curve as your project grows in complexity. Furthermore, much of industry is switching from JavaScript to TypeScript.
 - Use a linter like [ESLint](https://eslint.org/) and a code formatter like [Prettier](https://prettier.io/). This is like mypy and black for Python respectively. ESLint catches errors and Prettier ensures consistent formatting, regardless of the conventions of each individual developer. I found the auto-indentation feature in Prettier to be very helpful with nested HTML tags that you will deal with.
 - Async/await/promises in JavaScript is a concept that you (most likely) haven't been exposed to in Java, Python, C, or C++. It's much more common in JavaScript. In phase 1, you'll use this when calling GitLab's API. Here's a video that I think does a great job at explaining it: https://www.youtube.com/watch?v=vn3tm0quoqE
@@ -53,7 +52,6 @@ If there are any errors or if there is something you want to add, create a pull 
 ## Deployment
 - Learn which AWS services you will need, and what each of them does. The ones I recommmend first looking at are:
     - [Amplify](https://aws.amazon.com/amplify/) for front-end deployment
-        - [S3](https://aws.amazon.com/s3/) if you want to manually upload a plain HTML, CSS, and JS website
     - [Certificate Manager](https://aws.amazon.com/certificate-manager/) for TLS/SSL certificate (in order to get `https`)
     - [EC2](https://aws.amazon.com/ec2/) for back-end deployment (phase 2)
     - [RDS](https://aws.amazon.com/rds/) for database hosting (phase 2)
