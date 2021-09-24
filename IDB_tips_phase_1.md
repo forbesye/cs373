@@ -53,6 +53,7 @@ If there are any errors or if there is something you want to add, create a pull 
 ## Deployment
 - Learn which AWS services you will need, and what each of them does. The ones I recommmend first looking at are:
     - [Amplify](https://aws.amazon.com/amplify/) for front-end deployment
+        - [S3](https://aws.amazon.com/s3/) if you want to manually upload a plain HTML, CSS, and JS website
     - [Certificate Manager](https://aws.amazon.com/certificate-manager/) for TLS/SSL certificate (in order to get `https`)
     - [EC2](https://aws.amazon.com/ec2/) for back-end deployment (phase 2)
     - [RDS](https://aws.amazon.com/rds/) for database hosting (phase 2)
