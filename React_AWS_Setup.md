@@ -7,7 +7,7 @@ I'm going to show how to:
 
 If you created a non-React site for this phase, the instructions for deployment work exactly the same, so just skip the React set up section.
 
-I'm going to be creating the cat picture React app that I showed in the last guide, this time in TypeScript, and I want to make it accessable at [cat-pictures-react.texasvotes.me](cat-pictures-react.texasvotes.me):
+I'm going to be creating the cat picture React app that I showed in the last guide, this time in TypeScript, and I want to make it accessable at [https://cat-pictures-react.texasvotes.me](https://cat-pictures-react.texasvotes.me):
 | ![Screen Shot 2021-09-24 at 10 58 57 AM](https://user-images.githubusercontent.com/8890739/134705548-f8622a9b-2002-4e01-ac85-0ba7bf7c9df5.png) | 
 |:--:| 
 | *The final product!* |
@@ -85,4 +85,4 @@ This is what my DNS records looked like when I was done with everything. Google 
 
 <img width="677" alt="Screen Shot 2021-09-24 at 12 57 24 PM" src="https://user-images.githubusercontent.com/8890739/134720227-b1fce32d-21dd-4664-87c2-9a4978fb26fb.png">
 
-The site at [cat-pictures-react.texasvotes.me](cat-pictures-react.texasvotes.me) is now available to the entire world!
+The site at [https://cat-pictures-react.texasvotes.me](https://cat-pictures-react.texasvotes.me) is now available to the entire world!
