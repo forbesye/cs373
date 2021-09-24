@@ -1,6 +1,11 @@
 # Creating a React app and deploying to AWS
 
-I'm going to show how to create a base React app using [Create React App](https://create-react-app.dev/), deploy that app to AWS using [Amplify](https://aws.amazon.com/amplify/), connect your domain name, and enable TLS/SSL (https). If you created a non-React site for this phase, the instructions for deployment work exactly the same, so just skip the React set up section.
+I'm going to show how to:
+- Create a base React app using [Create React App](https://create-react-app.dev/)
+- Deploy that app to AWS using [Amplify](https://aws.amazon.com/amplify/)
+- Connect your domain name, and enable TLS/SSL (https)
+
+If you created a non-React site for this phase, the instructions for deployment work exactly the same, so just skip the React set up section.
 
 I'm going to be creating the cat picture React app that I showed in the last guide, this time in TypeScript:
 | ![Screen Shot 2021-09-24 at 10 58 57 AM](https://user-images.githubusercontent.com/8890739/134705548-f8622a9b-2002-4e01-ac85-0ba7bf7c9df5.png) | 
@@ -34,7 +39,25 @@ That should be good enough to deploy now, let's do that!
    
 ## Deploying on AWS Amplify
 
+Make an AWS account if you haven't and go to [AWS Amplify](https://aws.amazon.com/amplify/). 
 
+Then click on "New app" > "Host web app", choose GitLab as your Git host, and then continue.
+
+![Screen Shot 2021-09-24 at 9 01 43 AM](https://user-images.githubusercontent.com/8890739/134707228-2dd22b75-e90b-4316-b62f-82894d825469.png)
+
+Choose your repo for the project and keep main as the default branch. Then check that your repo is a monorepo (since we'll be adding a back-end in phase 2), and type the name of the folder that your front-end code is in. It should be `front-end` if you followed the first part of this guide.
+
+![Screen Shot 2021-09-24 at 9 02 17 AM](https://user-images.githubusercontent.com/8890739/134707311-2ac826ed-0c9e-4772-a46f-0a18a12d1e2d.png)
+
+Click through the rest of the screens, and then your site should deploy! Any time you push changes to your main branch, the site will automatically redeploy.
+
+Next, we want to make a seperate development deployment that is connected to your develop branch.
+
+Go to the general page of your app on AWS Amplify, and then click the "Connect Branch" button. Select your develop branch, then save and deploy. Now you have a another deployment that is independent from your production deployment. This allows your group to keep developing and seeing changes online by pushing to the develop branch, and leaving the main branch alone.
+
+This is what you should see when you're done:
+
+![image](https://user-images.githubusercontent.com/8890739/134708968-1840c13c-ecb8-4c3b-a97c-1b48ec401ebc.png)
 
 ## Connecting domain name and enabling TLS/SSL
 
