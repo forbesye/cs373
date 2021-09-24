@@ -85,4 +85,6 @@ This is what my DNS records looked like when I was done with everything. Google 
 
 <img width="677" alt="Screen Shot 2021-09-24 at 12 57 24 PM" src="https://user-images.githubusercontent.com/8890739/134720227-b1fce32d-21dd-4664-87c2-9a4978fb26fb.png">
 
+Ignore the extra validation CNAME, and the subdomains that I added. You won't need these, except for the `api` subdomain in phase 2.
+
 The site at [https://cat-pictures-react.texasvotes.me](https://cat-pictures-react.texasvotes.me) is now available to the entire world!
