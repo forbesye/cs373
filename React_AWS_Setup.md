@@ -51,7 +51,7 @@ Choose your repo for the project and keep main as the default branch. Then check
 
 Click through the rest of the screens, and then your site should deploy! Any time you push changes to your main branch, the site will automatically redeploy.
 
-Next, we want to make a seperate development deployment that is connected to your develop branch.
+Next, we want to make a seperate development site that is connected to your develop branch.
 
 Go to the general page of your app on AWS Amplify, and then click the "Connect Branch" button. Select your develop branch, then save and deploy. Now you have a another deployment that is independent from your production deployment. This allows your group to keep developing and seeing changes online by pushing to the develop branch, and leaving the main branch alone.
 
