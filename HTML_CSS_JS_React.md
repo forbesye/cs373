@@ -251,7 +251,7 @@ const Cats = () => {
     <form>
       <img src={catUrl} alt="cute cat" style={{ width: 400, height: 300 }} />
       <button type="button" onClick={getCat}>
-        Increment Value
+        Get Random Cat
       </button>
     </form>
   );
