@@ -260,7 +260,7 @@ const Cats = () => {
 
 I made a [Code Sandbox](https://codesandbox.io/s/react-playground-forked-uqxve) for the Counter and [Cat Pics](https://codesandbox.io/s/react-playground-forked-28j53?file=/index.js), so you can see it work and mess around with the code.
 
-I'll show how to create a basic React app in an [upcoming guide](https://github.com/forbesye/cs373/blob/main/React_AWS_Setup.md), and how to deploy it to AWS.
+I'll show how to create a basic React app in an [upcoming guide](./React_AWS_Setup.md), and how to deploy it to AWS.
 
 ## Useful Links
 - HTML
