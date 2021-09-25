@@ -83,7 +83,7 @@ Right after, AWS will provide another CNAME and alias record to add. The destina
 
 This is what my DNS records looked like when I was done with everything. Google domains doesn't support alias records, so I had to set up a domain forward so when anyone goes to `texasvotes.me`, it redirects to `www.texasvotes.me`.
 
-<img width="677" alt="Screen Shot 2021-09-24 at 12 57 24 PM" src="https://user-images.githubusercontent.com/8890739/134720227-b1fce32d-21dd-4664-87c2-9a4978fb26fb.png">
+<img width="677" alt="Screen Shot 2021-09-24 at 12 57 24 PM" src="https://user-images.githubusercontent.com/8890739/134751886-7bfe912b-0e66-42a9-9529-8ca631bbaa22.png">
 
 Ignore the extra validation CNAME, and the subdomains that I added. You won't need these, except for the `api` subdomain in phase 2.
 
