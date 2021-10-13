@@ -2,7 +2,7 @@
 
 I'm going to show how to:
 - Set up a skeleton Flask app with Ngnix and uWSGI
-- Create a Docker image for development and deployment
+- Create a Docker image for development and production
 - Deploy it all to AWS Elastic Beanstalk
 - Configure TLS/SSL and domain name
 
@@ -104,10 +104,76 @@ service nginx start
 uwsgi --ini uwsgi.ini
 ```
 
-Finally I added a `requirements.txt` file. This will need to be modified as you add more Python packages to your project:
+Finally add a `requirements.txt` file. This will need to be modified as you add more Python packages to your project:
 ```
 Flask==1.1.2
 uWSGI==2.0.19.1
 ```
 
-# Create a Docker image for development and production
+## Create a Docker image for development and production
+
+I'm going to create two Dockerfiles, `dev.Dockerfile` for development purposes, and `Dockerfile` for production. The main differences are that the development Dockerfile explicitly runs `app.py` on port 5000, while the production runs the `start.sh` file we created earlier on port 80.
+
+dev.Dockerfile:
+```dockerfile
+FROM ubuntu:latest
+ENV DEBIAN_FRONTEND=noninteractive
+
+COPY ./badproxy /etc/apt/apt.conf.d/99fixbadproxy
+
+RUN apt-get clean && sudo apt-get update
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip python3-dev build-essential vim
+RUN apt-get install -y libmysqlclient-dev libpq-dev postgresql
+
+COPY . usr/src/backend
+COPY requirements.txt usr/src/backend/requirements.txt
+
+WORKDIR /usr/src/backend
+
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python3", "app.py"]
+```
+
+Dockerfile:
+```dockerfile
+FROM ubuntu:latest
+ENV DEBIAN_FRONTEND=noninteractive
+
+# https://forums.docker.com/t/hash-sum-mismatch-writing-more-data-as-expected/45940/3
+# Uncomment this line and follow this if you have the same issue
+COPY ./badproxy /etc/apt/apt.conf.d/99fixbadproxy
+
+RUN apt-get update -y
+RUN apt-get install -y python3
+RUN apt-get install -y python3-pip python3-dev build-essential vim
+RUN apt-get -y install nginx
+
+COPY . usr/src/backend
+COPY requirements.txt usr/src/backend/requirements.txt
+
+WORKDIR /usr/src/backend
+
+RUN pip3 install --upgrade pip
+RUN pip3 install -r requirements.txt
+
+EXPOSE 80
+
+COPY nginx.conf /etc/nginx
+RUN chmod +x ./start.sh
+CMD ["./start.sh"]
+```
+
+Note: I was facing some issues with the apt-get calls when building the Docker image, so I had to follow that badproxy fix that you can see above. This might not be needed for you if you can build it correctly without it.
+
+Now you can test the Docker images to see if they work. There are three important flags to remember: `-p`, `-t`, and `-f`, these are for port, tag, and file respectively.
+
+To build and run the development Docker image, run the following. These commands are for Linux/WSL/MacOS:
+
+`sudo docker build --tag flask-docker -f dev.Dockerfile .`
+
+```docker run -it -v `pwd`:/usr/backend -w /usr/backend -p 5000:5000 flask-docker```
