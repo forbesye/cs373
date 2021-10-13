@@ -191,3 +191,11 @@ This will be viewable at `localhost`.
 ![Screen Shot 2021-10-13 at 11 51 01 AM](https://user-images.githubusercontent.com/8890739/137178077-6f38bbcc-d4f8-43d8-9713-0109600457e8.png)
 
 Now we're ready to deploy this to AWS Elastic Beanstalk!
+
+# Deploying to AWS Elastic Beanstalk
+
+First, you need to install the AWS Elastic Beanstalk CLI. Here's the guide on how to do so: https://github.com/aws/aws-elastic-beanstalk-cli-setup
+
+Once you got that installed, you need to get your AWS access key and secret access key. You can get them here: https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html
+
+***DO NOT PUSH THE SECRET KEY TO YOUR REPO!!!***
