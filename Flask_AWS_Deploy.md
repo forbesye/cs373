@@ -189,3 +189,5 @@ To build and run the production Docker image:
 This will be viewable at `localhost`.
 
 ![Screen Shot 2021-10-13 at 11 51 01 AM](https://user-images.githubusercontent.com/8890739/137178077-6f38bbcc-d4f8-43d8-9713-0109600457e8.png)
+
+Now we're ready to deploy this to AWS Elastic Beanstalk!
