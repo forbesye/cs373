@@ -5,6 +5,7 @@ I'm going to show how to:
 - Create a Docker image for development and production
 - Deploy it all to AWS Elastic Beanstalk
 - Configure TLS/SSL and domain name
+- Set up automatic deployment on GitLab pipelines for develop and main branches
 
 All of the code for the this test API can be seen here: https://gitlab.com/forbesye/test-api
 
