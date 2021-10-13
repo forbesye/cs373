@@ -168,7 +168,7 @@ RUN chmod +x ./start.sh
 CMD ["./start.sh"]
 ```
 
-Note: I was facing some issues with the apt-get calls when building the Docker image, so I had to follow that badproxy fix that you can see above. This might not be needed for you if you can build it correctly without it.
+**Note**: I was facing some issues with the apt-get calls when building the Docker image, so I had to follow that badproxy fix that you can see above. This might not be needed for you if you can build it correctly without it.
 
 Now you can test the Docker images to see if they work. There are three important flags to remember: `-p`, `-t`, and `-f`, these are for port, tag, and file respectively.
 
