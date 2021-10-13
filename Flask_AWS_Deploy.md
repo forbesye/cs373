@@ -199,3 +199,17 @@ First, you need to install the AWS Elastic Beanstalk CLI. [Here's the guide on h
 Once you got that installed, you need to get your AWS access key and secret access key. [You can get them by following this guide](https://docs.aws.amazon.com/powershell/latest/userguide/pstools-appendix-sign-up.html)
 
 ***DO NOT PUSH THE SECRET KEY TO YOUR REPO!!!***
+
+The rest is pretty straightforward once you have the CLI installed. I followed [this guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/docker.html) to get it onto AWS.
+
+You need to make sure you're in your `back-end` folder before you run all of this! Also make sure your `Dockerfile` is in the folder, as the CLI will look for it when you're creating your EB instance.
+
+First run `eb init -p docker your-application-name` and follow all prompts, pasting your AWS access key and secret access key when prompted. The application name is fairly arbitrary, so have it as whatever you want.
+
+Next run `eb local run --port 5000`. This should build and run your production Docker image, and make it available at `localhost:5000`. Use this to make sure everything is running as expected.
+
+Next run `eb create environment-name`. This will do all the heavy lifting and get your Flask app and Docker image deployed on AWS. You can go to the console for your environment by running `eb console` and the deployment instance by running `eb open`.
+
+After a couple of minutes, your EB console should look something like this, and should be accessible at the `something.elasticbeanstalk.com` link.
+
+![aws-console](https://user-images.githubusercontent.com/8890739/137181134-ca60b608-ff46-4ff7-9918-e2a40a84a713.png)
