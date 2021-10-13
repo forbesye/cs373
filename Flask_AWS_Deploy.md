@@ -174,6 +174,18 @@ Now you can test the Docker images to see if they work. There are three importan
 
 To build and run the development Docker image, run the following. These commands are for Linux/WSL/MacOS:
 
-`sudo docker build --tag flask-docker -f dev.Dockerfile .`
+`sudo docker build -t flask-docker-dev -f dev.Dockerfile .`
 
-```docker run -it -v `pwd`:/usr/backend -w /usr/backend -p 5000:5000 flask-docker```
+```docker run -it -v `pwd`:/usr/backend -w /usr/backend -p 5000:5000 flask-docker-dev```
+
+This will be viewable at `localhost:5000`.
+
+To build and run the production Docker image:
+
+`sudo docker build -t flask-docker .`
+
+```docker run -it -v `pwd`:/usr/backend -w /usr/backend -p 80:80 flask-docker```
+
+This will be viewable at `localhost`.
+
+![Screen Shot 2021-10-13 at 11 51 01 AM](https://user-images.githubusercontent.com/8890739/137178077-6f38bbcc-d4f8-43d8-9713-0109600457e8.png)
