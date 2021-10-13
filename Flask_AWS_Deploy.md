@@ -200,7 +200,7 @@ Once you got that installed, you need to get your AWS access key and secret acce
 
 ***DO NOT PUSH THE SECRET KEY TO YOUR REPO!!!***
 
-The rest is pretty straightforward once you have the CLI installed. I followed [this guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/docker.html) to get it onto AWS.
+The rest is pretty straightforward once you have the CLI installed. I followed [this guide](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/docker.html) to get it onto AWS. I'll summarize it below:
 
 You need to make sure you're in your `back-end` folder before you run all of this! Also make sure your `Dockerfile` is in the folder, as the CLI will look for it when you're creating your EB instance.
 
