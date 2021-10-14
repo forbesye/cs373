@@ -256,6 +256,8 @@ We also want to include important environment variables like the database log in
 
 ![env-var](https://user-images.githubusercontent.com/8890739/137242717-f71b6ce6-2b70-4da7-8093-0d7d6146f774.png)
 
+**Note:** If you have a development API environment, you can change the database connection string to point towards a development database in your same AWS RDS instance.
+
 ## Set up automatic deployment on GitLab pipelines for develop and main branches
 
 Now we want our API to automatically deploy every time we push to develop or main. 
