@@ -214,3 +214,29 @@ Next run `eb create environment-name`. This will do all the heavy lifting and ge
 After a couple of minutes, your EB console should look something like this, and should be accessible at the `something.elasticbeanstalk.com` link.
 
 ![aws-console](https://user-images.githubusercontent.com/8890739/137181134-ca60b608-ff46-4ff7-9918-e2a40a84a713.png)
+
+## Configure TLS/SSL and domain name
+
+Now we want the make our API accessible at `https://api.website.com`. To do this, we need to get a TLS/SSL certificate from the AWS Certificate Manager, and then to assign it to our EB instance. Then we need to add the `api` CNAME record to the DNS to link it to the EB instance.
+
+First, go to [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) and request a new certificate.  Make sure that the URL that you provide for your certificate is `api.website.com`:
+
+![domain](https://user-images.githubusercontent.com/8890739/137238193-88cb00b7-fecb-4449-bfd5-8b10a0764e58.png)
+
+I had to do `test-api.texasvotes.me` because I already got a certificate for `api.texasvotes.me`. Also make sure you're on the same AWS region as you are for your EB instance. For example, in the two screenshots above, I'm in Oregon (us-west-2) for AWS Certificate Manager and Elastic Beanstalk. This is important for linking the certificate to the EB instance.
+
+The process is pretty straightforward and is very similar to what you did to get a TLS/SSL certificate in phase 1 with AWS Amplify if you used that. You will recieve a CNAME record with a long string for the host name and destination to use for verification of your domain name. Once your TLS/SSL certificate is provided (this should take a few minutes max). Your screen should look like this:
+
+![TLS](https://user-images.githubusercontent.com/8890739/137238594-c4929ae9-1bb3-4a2d-98dc-fba3fa4c6bc3.png)
+
+Next, go to your Elastic Beanstalk console. I followed this tutorial [here](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/configuring-https-elb.html). For our EB instance, we have a classic load balancer, so follow the steps for that. The configuration after following the directions should look like this before submission:
+
+![load](https://user-images.githubusercontent.com/8890739/137238853-565546df-58d9-494b-96ff-5dfca495ae62.png)
+
+**Note:** Make sure you hit the orange "APPLY" button at the bottom of the page after adding. Otherwise your changes will not be saved! This happened to me!
+
+Finally, add a CNAME record to your DNS records. Where `api` is the host name, and your `something.elasticbeanstalk.com` URL is the destination, like so:
+
+![image](https://user-images.githubusercontent.com/8890739/137239098-f25b1279-6ea0-42dd-8e09-05605db57703.png)
+
+After a couple of minutes, you should be able to access your API at `api.website.com`!
