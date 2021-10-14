@@ -1,11 +1,11 @@
 # How to deploy your Flask app to AWS
 
 I'm going to show how to:
-- Set up a skeleton Flask app with Ngnix and uWSGI
-- Create a Docker image for development and production
-- Deploy it all to AWS Elastic Beanstalk
-- Configure TLS/SSL and domain name
-- Set up automatic deployment on GitLab pipelines for develop and main branches
+- [Set up a skeleton Flask app with Ngnix and uWSGI](#Flask-app-with-Ngnix-and-uWSGI)
+- [Create a Docker image for development and production](#Create-a-Docker-image-for-development-and-production)
+- [Deploy it all to AWS Elastic Beanstalk](#Deploying-to-AWS-Elastic-Beanstalk)
+- [Configure TLS/SSL and domain name](#Configure-TLSSSL-and-domain-name)
+- [Set up automatic deployment on GitLab pipelines for develop and main branches](#Set-up-automatic-deployment-on-GitLab-pipelines-for-develop-and-main-branches)
 
 All of the code for the this test API can be seen here: https://gitlab.com/forbesye/test-api
 
@@ -193,7 +193,7 @@ This will be viewable at `localhost`.
 
 Now we're ready to deploy this to AWS Elastic Beanstalk!
 
-# Deploying to AWS Elastic Beanstalk
+## Deploying to AWS Elastic Beanstalk
 
 First, you need to install the AWS Elastic Beanstalk CLI. [Here's the guide on how to do so](https://github.com/aws/aws-elastic-beanstalk-cli-setup)
 
