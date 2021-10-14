@@ -209,7 +209,7 @@ First run `eb init -p docker your-application-name` and follow all prompts, past
 
 Next run `eb local run --port 5000`. This should build and run your production Docker image, and make it available at `localhost:5000`. Use this to make sure everything is running as expected.
 
-Next run `eb create environment-name`. This will do all the heavy lifting and get your Flask app and Docker image deployed on AWS. You can go to the console for your environment by running `eb console` and the deployment instance by running `eb open`.
+Next run `eb create environment-name`. This will do all the heavy lifting and get your Flask app and Docker image deployed on AWS. You can go to the console for your environment by running `eb console` and the deployment instance by running `eb open`. I would make the environment name something along the lines of `website-api-prod`, in case you want a development API instance, as we will cover below.
 
 After a couple of minutes, your EB console should look something like this, and should be accessible at the `something.elasticbeanstalk.com` link.
 
@@ -251,3 +251,67 @@ Finally, add a CNAME record to your DNS records. Where `api` is the host name, a
 ![image](https://user-images.githubusercontent.com/8890739/137239098-f25b1279-6ea0-42dd-8e09-05605db57703.png)
 
 After a couple of minutes, you should be able to access your API at `api.website.com`!
+
+We also want to include important environment variables like the database log in string, so that they are acessible for the Flask app in the EB instance. This can be done by going to Configuration > Software > Environment Properties:
+
+![env-var](https://user-images.githubusercontent.com/8890739/137242717-f71b6ce6-2b70-4da7-8093-0d7d6146f774.png)
+
+## Set up automatic deployment on GitLab pipelines for develop and main branches
+
+Now we want our API to automatically deploy every time we push to develop or main. 
+
+This is where my group faced the issue of having to pay money for two EB instances (development and production) per month for the ~2 months that we needed them up. Since we wanted to have a development API that we could work on during the week after submission of phase 2 and 3.
+
+I never found out a way to have a development and production API be on the same EB instance, and have two different subdomains be able to reach it and divert the requests in the correct manner. I think this may be possible to do with more knowlege of Nginx and uWSGI. So if anyone knows how to do so, please let me know. My group decided that the ~$15 a month ($6 per person for the two months we had the extra EB instance up) was worth it as it allowed us more time in development, and made sure we didn't touch production during grading. This isn't a requirement, but I would talk between your group and decide if it's worth it.
+
+Regardless, we can set up our GitLab CI/CD to use the EB CLI to deploy our app when we conditionally push to the main and possibly develop branch. First, like I mentioned previously, make sure you include the `!.elasticbeanstalk/config.yml` to the `.gitignore` in the `back-end` folder that is automatically created with `eb init`. 
+
+Next, add a `deploy` stage to your `.gitlab-ci.yml`, as well as a `deploy_production` job that conditionally runs on the `main` branch only. Mine looks like this:
+
+```yml
+image: node:latest
+
+stages:
+  - deploy
+
+deploy_develop:
+  image: python:3.6-stretch
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == "develop"
+  stage: deploy
+  before_script:
+    - pip install awsebcli --upgrade --user
+    - git checkout develop
+  script:
+    - cd back-end
+    - /root/.local/bin/eb deploy test-api-dev
+
+deploy_production:
+  image: python:3.6-stretch
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == "main"
+  stage: deploy
+  before_script:
+    - pip install awsebcli --upgrade --user
+    - git checkout main
+  script:
+    - cd back-end
+    - /root/.local/bin/eb deploy test-api-prod
+```
+
+The `deploy_develop` job is optional here. If you do decide to have a development API environment, make sure to create a new EB environment within the same application. As you can see, I had a second environment called `test-api-dev`.
+
+| API Instance | Optional | EB Application Name | EB Environment Name |
+|--------------|----------|---------------------|---------------------|
+| Production   | No       | website-api         | website-api-prod    |
+| Development  | Yes      | website-api         | website-api-dev     |
+
+Then, you need to add the AWS Access Key and Secret Access Key to your GitLab CI/CD settings, so that the pipeline runners can authenticate when they run. Go to Settings > CI/CD > Variables to add these. Also check to protect and mask these variables when you add them. It should look like this:
+
+![Screen Shot 2021-10-13 at 9 37 31 PM](https://user-images.githubusercontent.com/8890739/137244119-55b45cd0-388f-442f-a188-607e8bcf308f.png)
+
+Then, push your code to your develop/main branch and check if it works! Here's what my pipeline output looked like after a successful deployment:
+
+![Screen Shot 2021-10-13 at 9 42 06 PM](https://user-images.githubusercontent.com/8890739/137244274-82ab7d93-0e6a-44bb-b623-52e88ace7bba.png)
