@@ -1,0 +1,11 @@
+{
+  "name": "cs373-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:forbesye/cs373.git",
+  "author": "Jefferson Ye <forbesye@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
